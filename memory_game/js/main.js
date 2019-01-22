@@ -28,6 +28,12 @@ var cardsInPlay = []; //Initially set to empty.
 var flippedCards = [];
 
 
+function resetGame () {
+	location.reload();
+}
+
+document.getElementById('resetButton').addEventListener('click', resetGame);
+
 function createBoard() {
 	for (var i = 0; i < cards.length; i++) {
 	    var cardElement = document.createElement('img');
