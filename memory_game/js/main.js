@@ -25,6 +25,8 @@ var cards = [
 
 
 var cardsInPlay = []; //Initially set to empty.
+var flippedCards = [];
+
 
 function createBoard() {
 	for (var i = 0; i < cards.length; i++) {
@@ -57,12 +59,15 @@ function checkForMatch() {
 
 function flipCard() {
   	cardId = this.getAttribute('data-id');
+
+  	this.className ='selected';
 	this.setAttribute('src', cards[cardId].cardImage)
 	console.log("User flipped " + cards[cardId].rank);
 	console.log("Suit " + cards[cardId].suit);
 	console.log("Card Image  " + cards[cardId].cardImage);
 
 	cardsInPlay.push(cards[cardId].rank);
+	flippedCards.push(cardId);
 
 
 	if (cardsInPlay.length === 2) {
