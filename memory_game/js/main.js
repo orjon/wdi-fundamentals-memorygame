@@ -63,37 +63,10 @@ var cards = [
 }
 ];
 
-// var cards2 = [
-// {
-// 	rank: "queen",
-// 	suit: "hearts",
-// 	cardImage: "images/queen-of-hearts.png",
-// 	flipped: false
-// },
-// {
-// 	rank: "queen",
-// 	suit: "diamonds are forever",
-// 	cardImage: "images/queen-of-diamonds.png",
-// 	flipped: false
-// },
-// {
-// 	rank: "king",
-// 	suit: "hearts",
-// 	cardImage: "images/king-of-hearts.png",
-// 	flipped: false
-// },
-// {
-// 	rank: "king",
-// 	suit: "diamonds",
-// 	cardImage: "images/king-of-diamonds.png",
-// 	flipped: false
-// }
-// ];
+
 
 var cardsInPlay = []; //Initially set to empty.
 
-// console.log(cards2[1].suit); //test
-// console.log(cards2[1].flipped); //test
 
 function resetGame () {
 	location.reload();
@@ -104,65 +77,6 @@ document.getElementById('resetButton').addEventListener('click', resetGame);
 
 
 
-// function createBoard() {
-// 	for (var i = 0; i < cards2.length; i++) {
-// 	    var cardElement = document.createElement('img');
-// 	    cardElement.setAttribute('src', 'images/back.png');
-// 	    cardElement.setAttribute('data-id', i);
-//     	cardElement.addEventListener('click', flipCard);
-// 	    document.getElementById('game-board').appendChild(cardElement);
-// 	}
-// }
-
-
-// function checkForMatch() {
-
-// 	var flippedCards = document.querySelectorAll('.selected');
-
-// 	if (cardsInPlay[0] === cardsInPlay[1]) {
-// 	    for (var i=0; i<flippedCards.length; i++) {
-// 		    flippedCards[i].classList.remove('selected');
-// 		    flippedCards[i].classList.add('correct');
-// 		}
-// 		console.log("You found a match!");
-    
-// 	} else {
-// 		for (var i=0; i<flippedCards.length; i++) {
-// 		    flippedCards[i].classList.remove('selected');
-// 		    flippedCards[i].classList.add('incorrect');
-// 		}
-// 		console.log("Sorry, try again");
-// 		// setTimeout(function() {  //delay to prevent alert appearing too soon
-//         // 		alert("Sorry, try again");
-//         // },50)
-// 	}
-
-// }
-
-// function flipCard() {
-//   	var cardId = this.getAttribute('data-id');
-//   	this.className ='selected';
-// 	this.setAttribute('src', cards2[cardId].cardImage);
-// 	cards2[cardId].flipped = true;
-// 	// for (var i=0; i<cards2.length; i++) {
-// 	// 	console.log(cards2[i].flipped);
-// 	// }
-	
-// 	// console.log("User flipped " + cards[cardId].rank);
-// 	// console.log("Suit " + cards[cardId].suit);
-// 	// console.log("Card Image  " + cards[cardId].cardImage);
-// 	cardsInPlay.push(cards2[cardId].rank);
-
-
-
-// 	// if (cardsInPlay.length === 2) {
-// 	// 	checkForMatch();
-// 	// }
-// }
-
-// createBoard();
-
-// Original
 function createBoard() {
 	for (var i = 0; i < cards.length; i++) {
 	    var cardElement = document.createElement('img');
